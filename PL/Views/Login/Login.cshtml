@@ -1,0 +1,30 @@
+﻿@model ML.Login
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div class="container"> 
+        <div class="row">
+            <div class="col-12">
+                @using(Html.BeginForm("Login", "Login", FormMethod.Post))
+            {
+
+                @Html.LabelFor(m=>m.Usuario)
+                @Html.TextBoxFor(m => m.Usuario, "Usuario")
+                @Html.TextBoxFor(m => m.Contraseña, "Contraseña")
+                    
+                <button type="submit">Iniciar sesion</button>
+            }
+            </div>
+        </div>
+    </div>
+</body>
+</html>

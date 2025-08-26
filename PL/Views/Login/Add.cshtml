@@ -1,0 +1,21 @@
+﻿@model ML.Cliente
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="container">
+            @using (Html.BeginForm("Add", "Login", FormMethod.Post))
+            {
+                @Html.TextBoxFor(m => m.Nombre)
+                @Html.TextBoxFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Telefono)
+            <button type="submit">Enviar</button>
+            }
+        </div>
+    </div>
+</div>
